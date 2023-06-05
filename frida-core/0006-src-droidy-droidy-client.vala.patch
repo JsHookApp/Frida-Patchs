@@ -1,0 +1,25 @@
+From 729696b71116bc5c3ac0080a37f37e3a2ad4b8a0 Mon Sep 17 00:00:00 2001
+From: etjson <etjson@gmail.com>
+Date: Wed, 19 Apr 2023 14:37:03 +0800
+Subject: [PATCH 06/12] src/droidy/droidy-client.vala
+
+---
+ src/droidy/droidy-client.vala | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/droidy/droidy-client.vala b/src/droidy/droidy-client.vala
+index 0ed2ede..5ab4c00 100644
+--- a/src/droidy/droidy-client.vala
++++ b/src/droidy/droidy-client.vala
+@@ -1013,7 +1013,7 @@ namespace Frida.Droidy {
+ 						case "OPEN":
+ 						case "CLSE":
+ 						case "WRTE":
+-							throw new Error.PROTOCOL ("Unexpected command");
++							break;
+ 
+ 						default:
+ 							var length = parse_length (command_or_length);
+-- 
+2.35.3.windows.1
+

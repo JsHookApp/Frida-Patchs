@@ -1,0 +1,25 @@
+From a731152dc86e2fcbcd9774e5334ec5b622cdf723 Mon Sep 17 00:00:00 2001
+From: etjson <etjson@gmail.com>
+Date: Wed, 19 Apr 2023 14:42:28 +0800
+Subject: [PATCH 09/12] src/qnx/qnx-host-session.vala
+
+---
+ src/qnx/qnx-host-session.vala | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/qnx/qnx-host-session.vala b/src/qnx/qnx-host-session.vala
+index 69f2995..a4e59ab 100644
+--- a/src/qnx/qnx-host-session.vala
++++ b/src/qnx/qnx-host-session.vala
+@@ -182,7 +182,7 @@ namespace Frida {
+ 
+ 			var stream_request = Pipe.open (t.local_address, cancellable);
+ 
+-			var id = yield qinjector.inject_library_resource (pid, agent_desc, "frida_agent_main",
++			var id = yield qinjector.inject_library_resource (pid, agent_desc, "main",
+ 				make_agent_parameters (pid, t.remote_address, options), cancellable);
+ 			injectee_by_pid[pid] = id;
+ 
+-- 
+2.35.3.windows.1
+

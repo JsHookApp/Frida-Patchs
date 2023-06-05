@@ -1,0 +1,25 @@
+From 7cbb479fbec65bd7c29ed1a6a03d8da800bc65b2 Mon Sep 17 00:00:00 2001
+From: etjson <etjson@gmail.com>
+Date: Wed, 19 Apr 2023 14:43:42 +0800
+Subject: [PATCH 11/12] tests/test-agent.vala
+
+---
+ tests/test-agent.vala | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/tests/test-agent.vala b/tests/test-agent.vala
+index 10bb080..91b2c44 100644
+--- a/tests/test-agent.vala
++++ b/tests/test-agent.vala
+@@ -449,7 +449,7 @@ Interceptor.attach(Module.getExportByName('libsystem_kernel.dylib', 'open'), ()
+ 			assert_nonnull (module);
+ 
+ 			void * main_func_symbol;
+-			var main_func_found = module.symbol ("frida_agent_main", out main_func_symbol);
++			var main_func_found = module.symbol ("main", out main_func_symbol);
+ 			assert_true (main_func_found);
+ 			main_impl = (AgentMainFunc) main_func_symbol;
+ 
+-- 
+2.35.3.windows.1
+
